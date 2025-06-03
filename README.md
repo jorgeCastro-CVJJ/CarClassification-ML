@@ -479,32 +479,36 @@ Las gráficas de entrenamiento muestran un comportamiento más estable y control
 
 # Conclusiones Finales
 
-El análisis exhaustivo de los modelos implementados ha revelado conclusiones significativas que demuestran la evolución y mejora en el proceso de clasificación de vehículos:
+El análisis profundo de los modelos implementados ha revelado conclusiones significativas que demuestran la evolución y mejora en el proceso de clasificación de vehículos:
 
-- **Optimización arquitectónica exitosa:** La reestructuración del modelo resultó determinante, evidenciada por un incremento sustancial en la precisión, pasando del 64.35% al 81.78% en el dataset aumentado. Este avance subraya la importancia crítica de una arquitectura cuidadosamente optimizada.
-- **Beneficios del balance de datos:** La implementación del dataset balanceado, aunque implicó una modesta disminución en la precisión global, generó beneficios sustanciales:
+### **Optimización arquitectónica exitosa**
+
+- La reestructuración del modelo resultó determinante, evidenciada por un incremento sustancial en la precisión, pasando del **64.35% al 81.78%** en el dataset aumentado. Este avance subraya la importancia crítica de una arquitectura cuidadosamente optimizada.
+
+### **Beneficios del balance de datos**
+
+- La implementación del dataset balanceado, aunque implicó una modesta disminución en la precisión global, generó beneficios sustanciales:
     - Distribución equitativa entre clases (200 imágenes por categoría)
-    - Minimización significativa del sesgo clasificatorio
+    - Minimización significativa del sesgo, bias, de clasificación
     - Incremento notable en la capacidad de generalización
-- **Logros métricos sobresalientes:**
-    - Mejora consistente del F1-Score en todas las categorías
-    - Rendimiento excepcional en Tata Safari (0.89), Swift (0.87) y Toyota Innova (0.85)
-    - Armonización notable entre precisión y recall en el espectro completo de categorías
 
-Para potenciar aún más el rendimiento del modelo, se proponen las siguientes recomendaciones estratégicas:
+### **Logros en Métricas:**
 
-- **Optimización mediante ponderación de clases:** Incorporar class weights para gestionar eficientemente los desequilibrios residuales en categorías subrepresentadas.
-- **Técnicas sofisticadas de aumentación:** Integrar metodologías avanzadas como:
-    - Mixup: Fusión estratégica de imágenes para generar muestras enriquecidas
-    - CutMix: Técnicas de segmentación y combinación selectiva de elementos visuales
-    - Políticas de aumentación dinámicamente adaptativas
-- **Innovación arquitectónica:**
-    - Implementación de modelos pre-entrenados de última generación
-    - Desarrollo de sistemas de ensemble learning robustos
-    - Exploración de arquitecturas especializadas en reconocimiento vehicular
-- **Refinamiento de hiperparámetros:** Aplicación de metodologías avanzadas como Optimización Bayesiana o búsqueda en cuadrícula para maximizar la eficiencia paramétrica.
+- **Mejora consistente del F1-Score en todas las categorías**
+- Rendimiento excepcional en **Tata Safari (0.89), Swift (0.87) y Toyota Innova (0.85)**
+- Armonización notable entre precisión y recall en el espectro completo de categorías
 
-La implementación de estas mejoras propuestas tiene el potencial de elevar significativamente el desempeño del modelo actual, particularmente en escenarios de alta complejidad o requisitos específicos de clasificación.
+## Áreas de Mejora
+
+Es fundamental reconocer que el dataset tiene una gran influencia en el comportamiento del modelo. La cantidad de imágenes, su calidad, tamaño y características específicas (como la perspectiva del vehículo: frontal, lateral o interior) impactan en los patrones que reconoce el modelo. En esta implementación, una mayor cantidad de imágenes de los logos de las marcas de vehículos podría mejorar el rendimiento. Considerando que los vehículos modernos comparten muchas características similares, es crucial incluir esta información distintiva durante el entrenamiento del modelo.
+
+### **Optimización mediante ponderación de clases:**
+
+- Incorporar class weights para gestionar eficientemente los desequilibrios residuales en categorías subrepresentadas.
+
+### **Mejora en la Arquitectura:**
+
+- Implementación de modelos preentrenados de última generación, como ResNet, MobileNet o DenseNet.
 
 # Referencias
 
